@@ -36,7 +36,6 @@ body{
   padding: 1em 5em 5em 5em;
   border: 0.200000em solid #333030;
 }
-
 .grid h1{
   font-family: "helvetica";
   background-color: #413D3D;
@@ -47,7 +46,6 @@ body{
   padding: 0.020000em 0em;
   margin: 0em;
 }
-
 .grid h2{
   font-family: "helvetica";
   background-color: #413D3D;
@@ -57,7 +55,6 @@ body{
   padding: 0.020000em 0em;
   margin-bottom: 0em;
 }
-
 .grid h4{
   font-family: "helvetica";
   background-color: #413D3D;
@@ -66,20 +63,17 @@ body{
   color: #9b9999;
   padding: 0.200000em 0em;
 }
-
 #question{
   font-family: "monospace";
   font-size: 2.666666em;
   font-weight: bolder;
   color: #01BBFF;
 }
-
 .buttons{
   margin-top: 0.500000em;
   display: flex; 
   justify-content: center;
 }
-
 #btn0{
 	background-color: #01BBFF;
 	width: 25%;
@@ -90,7 +84,6 @@ body{
 	margin: .01em .2em .01em 0em;
 	padding: 0.25em 0.25em;
 }
-
 #btn1{
 	background-color: #01BBFF;
 	width: 25%;
@@ -101,16 +94,13 @@ body{
 	margin: .01em 0em .01em .2em;
 	padding: 0.25em 0.25em;
 }
-
 #btn0:hover, #btn1:hover{
 	cursor: pointer;
 	background-color: #1D3C6A;
 }
-
 #btn0:focus, #btn1:focus{
 	outline: 0;
 }
-
 .grid #whatIs{
   font-family: "monospace";
   font-size: 2em;
@@ -119,7 +109,6 @@ body{
   margin-bottom: 0em;
   padding-bottom: 0.500000em;
 }
-
 #btnTechInfo{
 	background-color: #333030;
 	width: 16%;
@@ -129,7 +118,6 @@ body{
 	margin: .01em .02em .01em 0em;
 	padding: .10em .10em;
 }
-
 #btnSimpInfo{
 	background-color: #333030;
 	width: 16%;
@@ -139,23 +127,19 @@ body{
 	margin: .01em 0em .01em .02em;
 	padding: .10em .10em;
 }
-
 #btnTechInfo:hover, #btnSimpInfo:hover{
 	cursor: pointer;
 	background-color: #01BBFF;
   color: #f7f3f3;
 }
-
 #btnTechInfo:focus, #btnSimpInfo:focus{
 	outline: 0;
 }
-
 .infoButtons{
   margin-top: 1em;
   display: flex; 
   justify-content: center;
 }
-
 .explination{
   margin-top: 1em;
   margin-bottom: 0em;
@@ -163,7 +147,6 @@ body{
   font-size: 1.666666em;
   color: #9b9999;
 }
-
 .notes{
   text-align: justify;
   margin-top: 0em;
@@ -173,7 +156,6 @@ body{
   font-weight: bolder;
   color: #9b9999;
 }
-
 /* Popup container - can be anything you want */
 .popup {
   position: relative;
@@ -184,7 +166,6 @@ body{
   -ms-user-select: none;
   user-select: none;
 }
-
 /* The actual popup */
 .popup .popuptext {
   visibility: hidden;
@@ -198,7 +179,6 @@ body{
   width:45em;
   transform: translate(-50%, -60%);
 }
-
 /* Popup arrow */
 .popup .popuptext::after {
   content: "";
@@ -212,7 +192,6 @@ body{
   border-style: solid;
   border-color: #555 transparent transparent transparent;
 }
-
 /* Toggle this class - hide and show the popup */
 .popup .show {
   visibility: visible;
@@ -231,3 +210,6 @@ body{
   to {opacity:1 ;}
 }
 
+@media(max-width: 375px) {
+  
+}
