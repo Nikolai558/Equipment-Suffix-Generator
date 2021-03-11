@@ -1,0 +1,56 @@
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Equipment Suffix Code</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+    <div class="grid">
+        <div id="quiz">
+            <h1 style="color: crimson;">WORK IN PROGRESS!</h1>
+            <h1>Equipment Suffix Generator</h1>
+            
+            <div class="popup" onclick="showPopup()">
+                <h2><u>What is an Equipment Suffix Code?</u></h2>
+                <span class="popuptext" id="codeExplanationPopup">
+                    Controllers need to know certain things about your aircraft quickly that affect the way your flight is handled.<br />Thankfully we have a system that tells ATC all of that information with a simple code generally referred to as a Suffix Code.<br />In the following example, the "/L" is the equipment suffix code:<br />B738/L = A Boeing 737-800 aircraft that is RVSM, GNSS capable and it has a Mode C transponder.
+                </span>
+            </div>
+
+            <hr>
+
+            <h2 id="question"></h2>
+
+            <div class="buttons">
+                <button id="btn0"><span id="choice0"></span></button>
+                <button id="btn1"><span id="choice1"></span></button>
+            </div>
+
+            <hr>
+
+            <p id="whatIs"></p>
+
+            <div class="infoButtons">
+                <button id="btnTechInfo"><span id="choice0"></span>Technical Explanation</button>
+                <button id="btnSimpInfo"><span id="choice1"></span>Simple Explanation</button>
+            </div>
+
+            <div class="explination">
+                <span id="techExplination"></span><br />
+                <span id="simpleExplination"></span>
+            </div>
+
+            <hr>
+
+            <div class="notes">
+                <span id="notes"></span>
+            </div>
+
+            <footer>
+                
+            </footer>
+        </div>
+    </div>
+<script src="question.js"></script>
+</body>
+</html>
