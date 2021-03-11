@@ -7,6 +7,11 @@ a{
     color: #01BBFF;
 }
 
+hr{
+	margin-top: 3px; 
+	margin-bottom: 3px;
+  }
+
 body{
 	background-color: #413D3D;
     text-align: center;
@@ -14,10 +19,10 @@ body{
 
 .grid{
     font-family: "helvetica";
-    width: 80%;
+    width: 90%;
     height: auto;
     margin: auto;
-    margin-top: 50px;
+    /*margin-top: 50px;*/
     background-color: #413D3D;
     padding: 30px 50px 50px 50px;
     border: 2px solid #333030;
@@ -87,6 +92,7 @@ body{
   color: #9b9999;
   margin-top: 20px;
   margin-bottom: 0px;
+  padding: 0;
 }
 
 #btnTechInfo{
@@ -132,6 +138,7 @@ body{
     margin-bottom: 30px;
     font-size: 20px;
     color: #9b9999;
+	padding: 5px;
 }
 
 /* Popup container - can be anything you want */
@@ -192,7 +199,6 @@ body{
 
 @media(max-width: 1300px) {
 	.grid{
-		margin-top: 25px;
 		padding: 15px 25px 25px 25px;
 		border: 2px solid #333030;
 	}
@@ -256,7 +262,6 @@ body{
 
 @media(max-width: 650px) {
 	.grid{
-		margin-top: 10px;
 		padding: 15px 25px 25px 25px;
 		border: 1px solid #333030;
 	}
@@ -320,7 +325,6 @@ body{
 
 @media(max-width: 325px) {
 	.grid{
-		margin-top: 10px;
 		padding: 15px 25px 25px 25px;
 		border: 1px solid #333030;
 	}

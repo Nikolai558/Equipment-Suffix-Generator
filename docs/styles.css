@@ -7,6 +7,10 @@
 .theme-block{
   padding: 0 0 1.875rem;
 }
+.container{
+  max-width: 100%;
+  padding: 0;
+}
 
 mark.red{
   background: none;
@@ -28,6 +32,8 @@ body{
 }
 
 .grid{
+  display: block;
+  align-items: center;
   font-size: 10px;
   width: 50%;
   height: auto;
