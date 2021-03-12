@@ -273,41 +273,72 @@ function showScores() {
     
     if(equipmentCode == undefined)
     {
-
+        // It appears you have entered an impossible combination of equipment capabilities or a combination that the FAA does not account for. Speak to a controller about your equipment suffix code.
+        gameOverHTML += "<h2>It appears you have entered an impossible combination of equipment capabilities or a combination that the FAA does not account for. Speak to a controller about your equipment suffix code.</h2><br /><br /><br />"
     }
-    
-    gameOverHTML += "<h1> Equipment Suffix: </h1> <h1 style=\"font-weight: bolder; color: #01BBFF;\">" + equipmentCode.toUpperCase() + "</h1>";
+    else
+    {
+        gameOverHTML += "<h1> Equipment Suffix: </h1> <h1 style=\"font-weight: bolder; color: #01BBFF;\">" + equipmentCode + "</h1>" + "<br /><br /><br />";
+    }
+    gameOverHTML +="<h2>For more information: \"FAA <a href='https://www.faa.gov/air_traffic/publications/atpubs/aim_html/index.html' target='_blank'>Aeronautical Information Manual</a> 5-1-8\"</h2>";
     var element = document.getElementById("quiz");
     element.innerHTML = gameOverHTML;
 };
  
 // create questions here
 var questions = [
-    new Question("XPDR","Do you have a Transponder?", ["Yes", "No"],
-    "A transponder is an electronic device that produces a response when it receives a radio-frequency interrogation.<br />Aircraft have transponders to assist in identifying them on air traffic control radar.<br />Collision avoidance systems have been developed to use transponder transmissions as a means of detecting aircraft at risk of colliding with each other.<br /><br />Air traffic control units use the term \"squawk\" when they are assigning an aircraft a transponder code, e.g., \"Squawk 7421\".<br />Squawk thus can be said to mean \"select transponder code\" or \"squawking xxxx\" to mean \"I have selected transponder code xxxx\".",
-    "If you can input a code that ATC gives you in a device similar to <a href='https://www.google.com/search?q=airplane+transponder&rlz=1C1CHBD_enUS884US884&source=lnms&tbm=isch&sa=X&ved=2ahUKEwjR5-vG1aTvAhWOMd8KHRo3DgoQ_AUoAnoECBQQBA&biw=1440&bih=797#imgrc=dj86MIjIEMrVDM' target='_blank'>THIS</a>, select YES to this question.",
-    "WHAT IS A \"TRANSPONDER\"?","<br /><b><mark class=\"red\">WARNING:</mark><b> On the VATSIM network, simulation of aircraft without a transponder is only permitted with air traffic control approval."),
-    new Question("MODEC", "Do you have a Mode-C transponder?", ["Yes", "No"],
-    "<a href='https://www.skybrary.aero/index.php/Transponder#:~:text=Civil%20aircraft%20may%20be%20equipped,and%20also%20permits%20data%20exchange.' target='_blank'>Click HERE</a> for more information.",
-    "If your transponder have the abiility to report your altitude to ATC, then answer YES to this question.","WHAT IS A \"MODE C TRANSPONDER\"?",
-    "The \"Mode C\" portion of your transponder it usually turned on by selecting the \"ALT\" option on your transponder.<br /><br /><b><mark class=\"red\">WARNING</mark><b> On the VATSIM network, you must have a transponder that reports altitude to ATC."),
-    new Question("GNSS", "Do you have the ability to navigate via Global Navigation Satellite System (GNSS)?", ["Yes", "No"],
-    "Global Navigation Satellite System (GNSS) refers to a constellation of satellites providing signals from space that transmit positioning and timing data to GNSS receivers. The receivers then use this data to determine location.<br /><br />By definition, GNSS provides global coverage. Examples of GNSS include Europe’s Galileo, the USA’s NAVSTAR Global Positioning System (GPS), Russia’s Global'naya Navigatsionnaya Sputnikovaya Sistema (GLONASS) and China’s BeiDou Navigation Satellite System.<br /><br /><a href='https://www.gsa.europa.eu/european-gnss/what-gnss' target='_blank'>Click HERE</a> for more information.",
-    "If your aircraft uses satellites to navigate, answer YES to this question.","WHAT IS \"GNSS\"?"),
-    new Question("RNAV", "Do you have the ability to navigate via RNAV?", ["Yes", "No"],
-    "<a href='https://www.skybrary.aero/index.php/Area_Navigation_(RNAV)' target='_blank' >Click HERE</a> for more information.",
-    "If ATC told you \"Cleared direct (any NAVAID or Point)\", would you be able to type that into your navigation system and go straight to that point?",
-    "WHAT IS \"RNAV\"?"),
-    new Question("RVSM", "Is your aircraft authorized for RVSM flight?", ["Yes", "No"],
-    "<a href='https://www.faa.gov/air_traffic/separation_standards/rvsm/' target='_blank'>Click HERE</a> for more information.",
-    "If you have equipment on your aircraft that allows you to fly at altitudes at and between FL290 and FL410 where ATC only has to provide 1,000ft of separation from you, then answer YES to this question.",
-    "WHAT IS \"RVSM\"?","Answering NO to this question may prevent you from being allowed to fly a cruising altitude at or between FL290 and FL410."),
-    new Question("DME", "Do you have a have DME capability?", ["Yes", "No"],
-    "<a href='https://www.faa.gov/about/office_org/headquarters_offices/ato/service_units/techops/navservices/gbng/lpdme/' target='_blank'>Click HERE</a> for more information.",
-    "If your aircraft has the ability to tell how far away you are from a point or NAVAID, answer YES to this question.", "WHAT IS \"DME\"?"),
-    new Question("TACAN", "Do you have the ability to navigate via TACAN?", ["Yes", "No"],
-    "A tactical air navigation system (TACAN) is a navigation system used by military aircraft.<br />It provides the user with bearing and distance (slant-range or hypotenuse) to a ground or ship-borne station.<br />It is a more accurate version of the VOR/DME system that provides bearing and range information for civil aviation.<br />Aircraft equipped with TACAN avionics can use this system for en route navigation as well as non-precision approaches to landing fields.",
-    "Generally speaking, unless you are flying a military aircraft, you will likely need to answer NO to this question.", "WHAT IS A \"TACAN\"?")
+    new Question(
+        "XPDR",
+        "Do you have a Transponder?", 
+        ["Yes", "No"],
+        "A transponder is an electronic device that produces a response when it receives a radio-frequency interrogation.<br />Aircraft have transponders to assist in identifying them on air traffic control radar.<br />Collision avoidance systems have been developed to use transponder transmissions as a means of detecting aircraft at risk of colliding with each other.<br /><br />Air traffic control units use the term \"squawk\" when they are assigning an aircraft a transponder code, e.g., \"Squawk 7421\".<br />Squawk thus can be said to mean \"select transponder code\" or \"squawking xxxx\" to mean \"I have selected transponder code xxxx\".<br />",
+        "If you can input a code that ATC gives you in a device similar to <a href='https://www.google.com/search?q=airplane+transponder&rlz=1C1CHBD_enUS884US884&source=lnms&tbm=isch&sa=X&ved=2ahUKEwjR5-vG1aTvAhWOMd8KHRo3DgoQ_AUoAnoECBQQBA&biw=1440&bih=797#imgrc=dj86MIjIEMrVDM' target='_blank'>THIS</a>, select YES to this question.<br /><br />",
+        "WHAT IS A \"TRANSPONDER\"?",
+        "<b><mark class=\"red\">WARNING:</mark><b> On the VATSIM network, simulation of aircraft without a transponder is only permitted with air traffic control approval."),
+    new Question(
+        "MODEC", 
+        "Do you have a Mode-C transponder?", 
+        ["Yes", "No"],
+        "<a href='https://www.skybrary.aero/index.php/Transponder#:~:text=Civil%20aircraft%20may%20be%20equipped,and%20also%20permits%20data%20exchange.' target='_blank'>Click HERE</a> for more information.<br />",
+        "If your transponder have the abiility to report your altitude to ATC, then answer YES to this question.<br /><br />",
+        "WHAT IS A \"MODE C TRANSPONDER\"?",
+        "The \"Mode C\" portion of your transponder is usually turned on by selecting the \"ALT\" option on your transponder.<br /><br /><b><mark class=\"red\">WARNING</mark><b> On the VATSIM network, you must have a transponder that reports altitude to ATC."),
+    new Question(
+        "GNSS", 
+        "Do you have the ability to navigate via Global Navigation Satellite System (GNSS)?", 
+        ["Yes", "No"],
+        "Global Navigation Satellite System (GNSS) refers to a constellation of satellites providing signals from space that transmit positioning and timing data to GNSS receivers. The receivers then use this data to determine location.<br /><br />By definition, GNSS provides global coverage. Examples of GNSS include Europe’s Galileo, the USA’s NAVSTAR Global Positioning System (GPS), Russia’s Global'naya Navigatsionnaya Sputnikovaya Sistema (GLONASS) and China’s BeiDou Navigation Satellite System.<br /><br /><a href='https://www.gsa.europa.eu/european-gnss/what-gnss' target='_blank'>Click HERE</a> for more information.<br />",
+        "If your aircraft uses satellites to navigate, answer YES to this question.<br /><br />",
+        "WHAT IS \"GNSS\"?"),
+    new Question(
+        "RNAV", 
+        "Do you have the ability to navigate via RNAV?", 
+        ["Yes", "No"],
+        "<a href='https://www.skybrary.aero/index.php/Area_Navigation_(RNAV)' target='_blank' >Click HERE</a> for more information.<br />",
+        "If ATC told you \"Cleared direct (any NAVAID or Point)\", would you be able to type that into your navigation system and go straight to that point?<br /><br />",
+        "WHAT IS \"RNAV\"?"),
+    new Question(
+        "RVSM",
+        "Is your aircraft authorized for RVSM flight?", 
+        ["Yes", "No"],
+        "<a href='https://www.faa.gov/air_traffic/separation_standards/rvsm/' target='_blank'>Click HERE</a> for more information.<br />",
+        "If you have equipment on your aircraft that allows you to fly at altitudes at and between FL290 and FL410 where ATC only has to provide 1,000ft of separation from you, then answer YES to this question.<br /><br />",
+        "WHAT IS \"RVSM\"?",
+        "Answering NO to this question may prevent you from being allowed to fly a cruising altitude at or between FL290 and FL410."),
+    new Question(
+        "DME", 
+        "Do you have a have DME capability?", 
+        ["Yes", "No"],
+        "<a href='https://www.faa.gov/about/office_org/headquarters_offices/ato/service_units/techops/navservices/gbng/lpdme/' target='_blank'>Click HERE</a> for more information.<br />",
+        "If your aircraft has the ability to tell how far away you are from a point or NAVAID, answer YES to this question.<br /><br />", 
+        "WHAT IS \"DME\"?"),
+    new Question(
+        "TACAN", 
+        "Do you have the ability to navigate via TACAN?", 
+        ["Yes", "No"],
+        "A tactical air navigation system (TACAN) is a navigation system used by military aircraft.<br />It provides the user with bearing and distance (slant-range or hypotenuse) to a ground or ship-borne station.<br />It is a more accurate version of the VOR/DME system that provides bearing and range information for civil aviation.<br />Aircraft equipped with TACAN avionics can use this system for en route navigation as well as non-precision approaches to landing fields.<br />",
+        "Generally speaking, unless you are flying a military aircraft, you will likely need to answer NO to this question.<br /><br />", 
+        "WHAT IS A \"TACAN\"?")
 ];
  
 // create quiz

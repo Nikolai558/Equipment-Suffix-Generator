@@ -1,3 +1,17 @@
+.theme-page-header-area{
+	padding: 1rem 0 2rem 0;
+  }
+  .navbar{
+	display: none;
+  }
+  .theme-block{
+	padding: 0 0 1.875rem;
+  }
+  .container{
+	max-width: 835px;
+	padding: 0;
+  }
+
 mark.red{
     background: none;
     color: crimson;
@@ -19,63 +33,62 @@ body{
 
 .grid{
     font-family: "helvetica";
-    width: 90%;
+    width: 830PX;
     height: auto;
     margin: auto;
-    /*margin-top: 50px;*/
     background-color: #413D3D;
-    padding: 30px 50px 50px 50px;
-    border: 2px solid #333030;
+	padding: 15px 25px 25px 25px;
+	border: 2px solid #333030;
 }
 
 .grid h1{
-    font-size: 40px;
+    font-size: 43px;
     font-weight: bolder;
     color: #9b9999;
-    padding: 4px 0px;
+    padding: 2px 0px;
     margin: 0;
 }
 
 .grid h2{
     background-color: #413D3D;
-    font-size: 25px;
+    font-size: 24px;
+	padding: 2px 0px;
     color: #9b9999;
-    padding: 4px 0px;
 }
 
 #question{
-    font-size: 30px;
+    font-size: 35px;
+	margin-bottom: 2px;
     font-weight: bolder;
     color: #01BBFF;
     padding: 0;
-    margin-bottom: 5px;
 }
 
 .buttons{
     margin-top: 0;
-    margin-bottom: 15px;
+    margin-bottom: 2px;
 }
 
 #btn0{
 	background-color: #01BBFF;
-	width: 250px;
-	font-size: 30px;
+	width: 40%;
+	font-size: 35px;
     font-weight: bolder;
 	color: #f7f3f3;
 	border: 1px solid #1D3C6A;
+	padding: 5px 5px;
 	margin: 10px 20px 10px 0px;
-	padding: 10px 10px;
 }
 
 #btn1{
 	background-color: #01BBFF;
-	width: 250px;
-	font-size: 30px;
+	width: 40%;
+	font-size: 35px;
     font-weight: bolder;
 	color: #f7f3f3;
 	border: 1px solid #1D3C6A;
+	padding: 5px 5px;
 	margin: 10px 0px 10px 20px;
-	padding: 10px 10px;
 }
 
 #btn0:hover, #btn1:hover{
@@ -90,29 +103,29 @@ body{
 .grid #whatIs{
   font-size: 20px;
   color: #9b9999;
-  margin-top: 20px;
+  margin-top: 10px;
   margin-bottom: 0px;
   padding: 0;
 }
 
 #btnTechInfo{
 	background-color: #333030;
-	width: 190px;
-	font-size: 16px;
+	width: 25%;
+	font-size: 20px;
 	color: #f7f3f3;
 	border: 1px solid #333030;
-	margin: 10px 5px 10px 0px;
-	padding: 10px 10px;
+	padding: 5px 5px;
+    margin: 10px 5px 10px 0px;
 }
 
 #btnSimpInfo{
 	background-color: #333030;
-	width: 190px;
-	font-size: 16px;
+	width: 25%;
+    font-size: 20px;
 	color: #f7f3f3;
 	border: 1px solid #333030;
+    padding: 5px 5px;
 	margin: 10px 0px 10px 5px;
-	padding: 10px 10px;
 }
 
 #btnTechInfo:hover, #btnSimpInfo:hover{
@@ -129,16 +142,16 @@ body{
     margin-top: 0px;
     margin-bottom: 0px;
     font-size: 20px;
+    text-align: justify;
     color: #9b9999;
 }
 
 .notes{
     text-align: justify;
-    margin-top: 20px;
+    margin-top: 10px;
     margin-bottom: 30px;
     font-size: 20px;
     color: #9b9999;
-	padding: 5px;
 }
 
 /* Popup container - can be anything you want */
@@ -154,15 +167,15 @@ body{
 
 /* The actual popup */
 .popup .popuptext {
-  visibility: hidden;
-  background-color: #555;
-  color: #fff;
-  border-radius: 6px;
-  padding: 8px 0;
-  position: absolute;
-  z-index: 1;
-  width:950px;
-  transform: translate(-50%, -100%);
+    visibility: hidden;
+    background-color: #555;
+    color: #fff;
+    border-radius: 2px;
+    padding: 2px 0;
+    position: absolute;
+    z-index: 1;
+    width:160%;
+	transform: translate(-50%, -100%);
 }
 
 /* Popup arrow */
@@ -197,7 +210,7 @@ body{
   to {opacity:1 ;}
 }
 
-@media(max-width: 1300px) {
+@media only screen and (min-width:651px) and (max-width: 830px)  {
 	.grid{
 		padding: 15px 25px 25px 25px;
 		border: 2px solid #333030;
@@ -247,6 +260,7 @@ body{
 	}
 	.explination{
 		font-size: 20px;
+		text-align: justify;
 	}
 	.notes{
 		margin-top: 10px;
@@ -260,8 +274,9 @@ body{
 	}
 }
 
-@media(max-width: 650px) {
+@media only screen and (min-width:520px) and (max-width: 650px) {
 	.grid{
+		width: 90%;
 		padding: 15px 25px 25px 25px;
 		border: 1px solid #333030;
 	}
@@ -323,8 +338,9 @@ body{
 	}
 }
 
-@media(max-width: 325px) {
+@media only screen and (min-width:240px) and (max-width: 519px){
 	.grid{
+		width: 90%;
 		padding: 15px 25px 25px 25px;
 		border: 1px solid #333030;
 	}
@@ -385,4 +401,3 @@ body{
 	transform: translate(-50%, -25%);
 	}
 }
-
