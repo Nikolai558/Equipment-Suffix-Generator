@@ -153,8 +153,8 @@ function displayTechInfo(id)
     var button = document.getElementById(id)
     button.onclick = function()
     {
-        document.getElementById("simpleExplination").innerHTML = "";
-        var element = document.getElementById("techExplination");
+        document.getElementById("simpleexplanation").innerHTML = "";
+        var element = document.getElementById("techexplanation");
         element.innerHTML = quiz.getQuestionIndex().technicalExplanation;
     }
 }
@@ -164,15 +164,15 @@ function displaySimpleInfo(id)
     var button = document.getElementById(id)
     button.onclick = function()
     {
-        document.getElementById("techExplination").innerHTML = "";
-        var element = document.getElementById("simpleExplination");
+        document.getElementById("techexplanation").innerHTML = "";
+        var element = document.getElementById("simpleexplanation");
         element.innerHTML = quiz.getQuestionIndex().simpleExplanation;
     }
 }
  
 function guess(id, guess) {
-    document.getElementById("techExplination").innerHTML = "";
-    document.getElementById("simpleExplination").innerHTML = "";
+    document.getElementById("techexplanation").innerHTML = "";
+    document.getElementById("simpleexplanation").innerHTML = "";
 
     var button = document.getElementById(id);
     button.onclick = function() {
