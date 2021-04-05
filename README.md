@@ -4,7 +4,7 @@ Find the appropriate FAA Equipment Suffix Code for your aircraft for flight on f
 
 <hr>
 
-## [Equipment Refrence Table](https://www.faa.gov/air_traffic/publications/atpubs/aim_html/chap5_section_1.html)
+## [Equipment Reference Table](https://www.faa.gov/air_traffic/publications/atpubs/aim_html/chap5_section_1.html)
 
 For many reasons, ATC needs to know what your RVSM, Navigation and Transponder capabilities are. Thankfully we have a system that tells ATC all of that information with a simple code. That code is a suffix code. It is designated as a “Suffix Code” because that code is placed after your aircraft type code in the flight plan.
 <br>Example: B738/L = A Boeing 737-800 aircraft that is RVSM, GNSS capable and it has a Mode C transponder. The equipment suffix code is /L.
